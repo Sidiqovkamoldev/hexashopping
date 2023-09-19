@@ -4,7 +4,7 @@ from .views import HomePageView, product_detail, ContactPageView, CategoryPageVi
 
 
 urlpatterns = [
-        path("", HomePageView.as_view(), name='home_page_view'),
+        path("home/", HomePageView.as_view(), name='home_page_view'),
         path('products/create/', ContactPageView.as_view(), name='create_client_view'),
         path('product/<slug:product>/', product_detail, name='product_detail_view'),
         path('category/', CategoryPageView.as_view(), name='categories_detail_view'),

@@ -8,8 +8,8 @@ django = "*"
 django-phone-field = "*"
 django-bootstrap5 = "*"
 pillow = "*"
-python-decouple = "*"
 whitenoise = "*"
+python-decouple = "*"
 
 [dev-packages]
 

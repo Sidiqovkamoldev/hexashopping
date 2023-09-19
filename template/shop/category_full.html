@@ -1,0 +1,33 @@
+  {% extends 'shop/base.html' %}
+{% load static %}
+{% load django_bootstrap5 %}
+{% block title %}  {% endblock title %}
+{% block content %}
+
+
+
+
+
+<section class="section" id="product">
+        <div class="container">
+            <div class="product row">
+                        <div>
+                            {% for category in categories %}
+                                <div>{{ category.name }}</div>
+
+                            {% endfor %}
+                        </div>
+
+
+
+
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Product Area Ends ***** -->
+
+
+
+{% endblock content %}

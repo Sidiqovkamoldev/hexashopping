@@ -1,0 +1,188 @@
+ {% extends 'shop/base.html' %}
+{% load static %}
+{% block title %} Bosh sahifa {% endblock title %}
+{% block content %}
+    <div class="main-banner" id="top">
+        <div class="container-fluid">
+            <div class="row">
+                {% if home_product %}
+                <div class="col-lg-6">
+                    <div class="left-content">
+                        <div class="thumb">
+                            <div class="inner-content">
+                                <h6><a href="{{ home_product.get_absolute_url }}">{{ home_product.title }}</a></h6>
+{#                                <span>{{ home_product.body | truncatewords:}}</span>#}<br><br><br>
+                                <div class="main-border-button">
+                                    <a href="{{ home_product.get_absolute_url }}">Purchase Now!</a>
+                                </div>
+                            </div>
+                            <a href="{{ home_product.get_absolute_url }}">
+                            <img src="{{ home_product.image.url }}" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+                <div class="col-lg-6">
+                    <div class="right-content">
+                        <div class="row">
+                            {% if good_product %}
+                            <div class="col-lg-6">
+                                <div class="right-first-image">
+                                    <div class="thumb">
+                                        <div class="inner-content">
+                                            <h4><a href="{{ good_product.get_absolute_url }}"> {{ good_product.title }}</a></h4>
+                                            <span>{{ good_product.body | truncatewords:5 }}</span>
+                                        </div>
+                                        <a href="{{ good_product.get_absolute_url }}">
+                                        <img src="{{ good_product.image.url }}">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endif %}
+                            {%  if clever_watch%}
+                            <div class="col-lg-6">
+                                <div class="right-first-image">
+                                    <div class="thumb">
+                                        <div class="inner-content">
+                                            <h4><a href="{{ clever_watch.get_absolute_url }}">{{ clever_watch.title }}</a></h4>
+                                            <span>{{ clever_watch.body | truncatewords:5 }}</span>
+                                        </div>
+                                        <a href="{{ clever_watch.get_absolute_url }}">
+                                        <img src="{{ clever_watch.image.url }}">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endif %}
+                            {% if cars_product%}
+                            <div class="col-lg-6">
+                                <div class="right-first-image">
+                                    <div class="thumb">
+                                        <div class="inner-content">
+                                            <h4><a href="{{ cars_product.get_absolute_url }}">{{ cars_product.title }}</a></h4>
+                                            <span>{{ cars_product.body | truncatewords:5 }}</span>
+                                        </div>
+                                        <a href="{{ cars_product.get_absolute_url }}">
+                                        <img src="{{ cars_product.image.url }}">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endif %}
+                            {% if present_product%}
+                            <div class="col-lg-6">
+                                <div class="right-first-image">
+                                    <div class="thumb">
+                                        <div class="inner-content">
+                                            <h4><a href="{{ present_product.get_absolute_url }}">{{ present_product.title }}</a></h4>
+                                            <span>{{ present_product.body | truncatewords:5 }}</span>
+                                        </div>
+                                        <a href="{{ present_product.get_absolute_url }}">
+                                        <img src="{{ present_product.image.url }}"></a>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ***** Main Banner Area End ***** -->
+
+    <!-- ***** Men Area Starts ***** -->
+    {% for category in categories %}
+    <section class="section" id="men">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="section-heading">
+                        <h2>{{ category.name }}</h2>
+{#                        <span>{{ category.description }}</span>#}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="men-item-carousel">
+                        <div class="owl-men-item owl-carousel">
+                            {% for product in products_list %}
+                            {% if category == product.category %}
+                            <div class="item">
+                                <div class="thumb">
+                                    <div class="hover-content">
+                                        <ul>
+                                            <li><a href="single-product.html"><i class="fa fa-eye"></i></a></li>
+                                            <li><a href="single-product.html"><i class="fa fa-star"></i></a></li>
+                                            <li><a href="single-product.html"><i class="fa fa-shopping-cart"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    <a href="{{ product.get_absolute_url }}">
+                                    <img src="{{ product.image.url }}" alt="">
+                                    </a>
+                                </div>
+                                <div class="down-content"><a href="{{ product.get_absolute_url }}">
+                                    <h4>{{ product.title }}</h4></a>
+                                    <span>{{ product.price }}</span>
+                                    <ul class="stars">
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                    </ul>
+                                </div>
+                            </div>
+                                {% endif %}
+                            {% endfor %}
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {% endfor  %}
+    <!-- ***** Men Area Ends ***** -->
+
+    <!-- ***** Women Area Starts ***** -->
+
+    <!-- ***** Social Area Ends ***** -->
+
+    <!-- ***** Subscribe Area Starts ***** -->
+    <div class="subscribe">
+        <div class="container">
+            <div class="row">
+
+
+                <div class="col-lg-4">
+                    <div class="row">
+                        <div class="col-6">
+                            <ul>
+                                <li>Store Location:<br><span>Sunny Isles Beach, FL 33160, United States</span></li>
+                                <li>Phone:<br><span>010-020-0340</span></li>
+                                <li>Office Location:<br><span>North Miami Beach</span></li>
+                            </ul>
+                        </div>
+                        <div class="col-6">
+                            <ul>
+                                <li>Work Hours:<br><span>07:30 AM - 9:30 PM Daily</span></li>
+                                <li>Email:<br><span>info@company.com</span></li>
+                                <li>Social Media:<br><span><a href="#">Facebook</a>, <a href="#">Instagram</a>, <a href="#">Behance</a>, <a href="#">Linkedin</a></span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ***** Subscribe Area Ends ***** -->
+
+
+{% endblock content %}

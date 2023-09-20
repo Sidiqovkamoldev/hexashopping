@@ -128,8 +128,8 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATIC_ROOT="/home/djangomo/hexashop.uz/django/staticfiles"
-STATICFILES_DIRS=("/home/djangomo.hexashop.uz/django/static",)
+STATIC_ROOT="/home/hexashop/hexashop.uz/django/staticfiles"
+STATICFILES_DIRS=("/home/hexashop/hexashop.uz/django/static",)
 
 # local
 # STATIC_ROOT=BASE_DIR/'staticfiles'
@@ -144,7 +144,7 @@ STATICFILES_FINDERS=[
 
 
 MEDIA_URL='media/'
-MEDIA_ROOT="/home/djangomo/hexashop.uz/django/media"
+MEDIA_ROOT="/home/hexashop/hexashop.uz/django/media"
 # local
 # MEDIA_ROOT=BASE_DIR/'media/'
 

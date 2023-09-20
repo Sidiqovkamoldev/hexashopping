@@ -126,8 +126,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT='/home/djangomo/hexashop.uz/django/staticfiles/'
-STATICFILES_DIRS=('/home/djangomo/hexashop.uz/django/static/',)
+STATIC_ROOT='/home/hexashop/hexashop.uz/django/staticfiles/'
+STATICFILES_DIRS=('/home/hexashop/hexashop.uz/django/static/',)
 
 
 

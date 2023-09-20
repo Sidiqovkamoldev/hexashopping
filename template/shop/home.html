@@ -11,7 +11,7 @@
                         <div class="thumb">
                             <div class="inner-content">
                                 <h6><a href="{{ home_product.get_absolute_url }}">{{ home_product.title }}</a></h6>
-{#                                <span>{{ home_product.body | truncatewords:}}</span>#}<br><br><br>
+{#                                <span>{{ home_product.body | truncatewords:5}}</span><br><br><br>#}
                                 <div class="main-border-button">
                                     <a href="{{ home_product.get_absolute_url }}">Purchase Now!</a>
                                 </div>
@@ -117,9 +117,9 @@
                                 <div class="thumb">
                                     <div class="hover-content">
                                         <ul>
-                                            <li><a href="single-product.html"><i class="fa fa-eye"></i></a></li>
-                                            <li><a href="single-product.html"><i class="fa fa-star"></i></a></li>
-                                            <li><a href="single-product.html"><i class="fa fa-shopping-cart"></i></a></li>
+                                            <li><a href=""><i class="fa fa-eye"></i></a></li>
+                                            <li><a href=""><i class="fa fa-star"></i></a></li>
+                                            <li><a href=""><i class="fa fa-shopping-cart"></i></a></li>
                                         </ul>
                                     </div>
                                     <a href="{{ product.get_absolute_url }}">
@@ -128,7 +128,7 @@
                                 </div>
                                 <div class="down-content"><a href="{{ product.get_absolute_url }}">
                                     <h4>{{ product.title }}</h4></a>
-                                    <span>{{ product.price }}</span>
+                                    <span>{{ product.price }} so'm</span>
                                     <ul class="stars">
                                         <li><i class="fa fa-star"></i></li>
                                         <li><i class="fa fa-star"></i></li>

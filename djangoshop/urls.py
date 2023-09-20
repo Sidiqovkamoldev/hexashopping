@@ -1,5 +1,5 @@
 """
-URL configuration for config project.
+URL configuration for djangoshop project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.2/topics/http/urls/
@@ -24,3 +24,9 @@ urlpatterns = [
     path('',include('shop.urls')),
     path("accounts/", include('accounts.urls')),
 ]
+
+
+if settings.DEBUG:
+    urlpatterns+= static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+    urlpatterns+=static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+

@@ -22,12 +22,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-8duc+l8)o(1pqjfhf)4%9ioio6_c+fp^t&=b_-^j5#0uh1p5hz'
+SECRET_KEY = config("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 
 DEBUG = config('DEBUG', default=False, cast=bool)
 # DEBUG=True
-ALLOWED_HOSTS = ["hexashop.uz","www.hexashop.uz",'127.0.0.1']
+ALLOWED_HOSTS = ["hexashop-Tashkent.uz","www.hexashop-Tashkent.uz",'127.0.0.1']
 
 
 # Application definition
@@ -129,9 +129,9 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATIC_ROOT="/home/djangomo/hexashop.uz/django/staticfiles"
+STATIC_ROOT="/home/hexasho1/hexashop-tashkent.uz/django/staticfiles"
 
-STATICFILES_DIRS=("/home/djangomo/hexashop.uz/django/static",)
+STATICFILES_DIRS=("/home/hexasho1/hexashop-tashkent.uz/django/static",)
 
 # local
 # STATIC_ROOT=BASE_DIR/'staticfiles'
@@ -145,7 +145,7 @@ STATICFILES_FINDERS=[
 
 
 MEDIA_URL='media/'
-MEDIA_ROOT="/home/djangomo/hexashop.uz/django/media"
+MEDIA_ROOT="/home/hexasho1/hexashop-tashkent.uz/django/media"
 # local
 # MEDIA_ROOT=BASE_DIR/'media/'
 
